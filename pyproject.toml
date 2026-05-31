@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-com-cache-fila-ass-ncrona-e-limita-o-339f4a"
+version = "0.1.0"
+description = "Serviço HTTP com endpoints de negócio, camada de cache (in-memory ou interface para Redis), enfileiramento de trabalhos assíncronos e rate limiting por cliente — desafios de consistência e backpressure."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+api_com_cache_fila_ass_ncrona_e_limita_o_339f4a = "api_com_cache_fila_ass_ncrona_e_limita_o_339f4a.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
